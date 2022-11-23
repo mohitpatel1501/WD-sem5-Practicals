@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>
+        Practical 9 | Calculator
+    </title>
+    <style>
+        .container {
+            background-color: rgb(179, 241, 202);
+            border: 4px solid black;
+            border-radius: 30px;
+            text-align: center;
+            margin: 5em auto;
+            padding: 2em;
+            width: 50%;
+
+        }
+
+        input {
+            /* margin-bottom: 2em; */
+            margin: 2em 0.5em;
+            font-size: 1.5em;
+            width: 4em;
+            padding: 0.5em 0.5em;
+            border: 2px solid blue;
+            border-radius: 2em;
+        }
+
+        .input {
+            display: flex;
+        }
+
+        #firstNumber {
+            background-color: gainsboro;
+            margin-top: 0.5em;
+            margin-left: 1em;
+        }
+
+        #secondNumber {
+            background-color: gainsboro;
+            margin-top: 0.5em;
+            margin-left: 0.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <div class="input">
+                <h2>1st Number :</h2>
+                <input type="text" id="firstNumber" />
+            </div>
+            <br />
+            <div class="input">
+                <h2>2nd Number :</h2>
+                <input type="text" id="secondNumber" />
+            </div>
+            <br />
+            <input type="button" onClick="multiplyBy()" value="*" />
+            <input type="button" onClick="divideBy()" value="/" />
+            <input type="button" onClick="additionBy()" value="+" />
+            <input type="button" onClick="substractionBy()" value="-" />
+        </form>
+        <p>
+        <h2>The Result is : </h2><br />
+        <span id="result"></span>
+        </p>
+    </div>
+    <script>
+        function additionBy() {
+            num1 = document.getElementById("firstNumber").value;
+            num2 = document.getElementById("secondNumber").value;
+            let a = parseInt(num1);
+            let b = parseInt(num2);
+            document.getElementById("result").innerHTML = a + b;
+        }
+        function substractionBy() {
+            num1 = document.getElementById("firstNumber").value;
+            num2 = document.getElementById("secondNumber").value;
+            document.getElementById("result").innerHTML = num1 - num2;
+        }
+        function multiplyBy() {
+            num1 = document.getElementById("firstNumber").value;
+            num2 = document.getElementById("secondNumber").value;
+            document.getElementById("result").innerHTML = num1 * num2;
+        }
+
+        function divideBy() {
+            num1 = document.getElementById("firstNumber").value;
+            num2 = document.getElementById("secondNumber").value;
+            document.getElementById("result").innerHTML = num1 / num2;
+        }
+    </script>
+</body>
+
+</html>

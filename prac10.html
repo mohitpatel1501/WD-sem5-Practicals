@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Practical 10 | ODD & EVEN Number</title>
+    <style>
+        .container {
+            padding: 5em 5em;
+            width: 35%;
+            margin: 6em auto;
+            background-color: rgb(255, 217, 174);
+            border: 4px solid rgb(24, 24, 85);
+            border-radius: 2em;
+        }
+
+        input {
+            margin-bottom: 2em;
+            font-size: 1.5em;
+            width: 7em;
+            padding: 0.3em 0.3em;
+            border: 2px solid rgb(4, 150, 7);
+            border-radius: 12px;
+        }
+
+        .input {
+            display: flex;
+        }
+
+        #firstNumber {
+            background-color: rgb(230, 230, 230);
+            margin-top: 0.6em;
+            margin-left: 0.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <form>
+            <div class="input">
+                <h2>Enter Number :</h2>
+                <input type="text" id="firstNumber" />
+            </div>
+            <br />
+            <input type="button" onClick="odd_even()" value="Click" />
+        </form>
+        <p>
+        <h2>The Result is : </h2><br />
+        <span id="result"></span>
+        </p>
+    </div>
+
+    <script>
+        function odd_even() {
+            num = document.getElementById("firstNumber").value;
+            let a = parseInt(num);
+            if (a % 2 == 0)
+                document.getElementById("result").innerHTML = `<h3> ${a} is Even</h3>`;
+            else
+                document.getElementById("result").innerHTML = `<h3> ${a} is Odd</h3>`;
+        }
+    </script>
+
+</body>
+
+</html>
